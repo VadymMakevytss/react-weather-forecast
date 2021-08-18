@@ -7,7 +7,14 @@ import WeatherHeader from './components/WeatherHeader/WeatherHeader';
 function App() {
   return (
     <div className="App">
-     <h1>App component</h1>
+     <Card className="App">
+        <Card.Body>
+          <Card.Title>
+            <WeatherHeader />
+          </Card.Title>
+            <WeatherComponent />
+        </Card.Body>
+      </Card>
     </div>
   );
 }

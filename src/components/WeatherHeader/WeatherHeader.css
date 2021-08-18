@@ -1,0 +1,29 @@
+.querry {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.querry__form {
+  display: flex;
+  gap: 10px;
+}
+
+.query__input {
+  display: block;
+  margin-right: 20px;
+  height: 40px;
+}
+
+.query__language {
+  height: 40px;
+  width: 60px;
+}
+
+.query__submit {
+  width: 100px;
+  border-radius: 7px;
+  background-color: #569ed6;
+}
