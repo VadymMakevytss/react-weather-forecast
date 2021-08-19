@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './WeatherHeader.css'
 
-const WeatherHeader = () => {
-  const [language, setLanguage] = useState('ru')
-  const [city, setCity] = useState('');
+const WeatherHeader = ({ onCitySelect }) => {
+  const [language, setLanguage] = useState('ru');
+  const [city, setCity ] = useState('');
 
   const handleInput = (event) => {
     setCity(event.target.value);
-    console.log(event.target.value)
   }
 
   const handleLanguage = (event) => {
@@ -15,9 +14,18 @@ const WeatherHeader = () => {
     console.log(event.target.value)
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onCitySelect(city);
+    setCity('')
+  }
+
   return (
     <div className="querry">
-      <form className="querry__form">
+      <form
+        className="querry__form"
+        onSubmit={handleSubmit}
+      >
           <input 
             className="query__input"
             type="text"
